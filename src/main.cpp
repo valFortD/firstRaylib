@@ -17,7 +17,7 @@ int main() {
     Ball ball;
     ball.x = screenWidth/2;
     ball.y = screenHeight/2;
-    ball.size = 26;
+    ball.size = 28;
     ball.gravity = 1;
 
     while(!WindowShouldClose()) {
