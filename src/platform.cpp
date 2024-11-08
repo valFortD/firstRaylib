@@ -2,7 +2,7 @@
 
 void Platform::makePlatforms()
 {
-    platforms[0] = (Rectangle){ 0, screenHeight - 20, screenWidth, 15};     // Static platform
+    platforms[0] = (Rectangle){ 0, screenHeight - 20, screenWidth, 25};     // Static platform
 
     // Create random platforms
     int platformMin_y = screenHeight * 0.4;
