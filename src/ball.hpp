@@ -4,7 +4,7 @@
 class Ball {
 public:
     float x, y;
-    int size;
+    float size;
     float speedX;
     float speedY;
     float gravity;

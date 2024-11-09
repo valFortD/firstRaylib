@@ -22,15 +22,20 @@ void Ball::Update(const Platform& platform)
 void Ball::CheckForCollision(const Platform &platform)
 {
     for(int i = 0; i < Platform::platformCount; i++) {
-        Rectangle platformRect = platform.platforms[i]; // Checking ball on current platform
+        Rectangle platformRect = platform.platforms[i];
+        Rectangle ballRect = {
+            .x = x- size,
+            .y = y - size,
+            .width = size * 2,
+            .height = size * 2
+        };
 
         // Check collision
-        if(CheckCollisionCircleRec(Vector2{x, y}, size, platformRect)) {
-            // If collision detected, Rest ball position
+        if(CheckCollisionRecs(ballRect, platformRect)) {
+            // If collision detected, reset ball position on platform
             if(y + size > platformRect.y && y < platformRect.y + platformRect.height) {
-                // Ball on platform
                 y = platformRect.y - size; // Place ball on top of platform
-                    speedY = 0;
+                speedY = 0;
             } else {
                 speedY = -speedY + 10; // Bounce the ball downwards if it hits the platform's bottom
                 // -speedY to change it's direction downwards
