@@ -32,16 +32,16 @@ void Ball::CheckForCollision(const Platform &platform)
 
         // Check collision
         if(CheckCollisionRecs(ballRect, platformRect)) {
-            // If collision detected, reset ball position on platform
             if(y + size > platformRect.y && y < platformRect.y + platformRect.height) {
                 y = platformRect.y - size; // Place ball on top of platform
                 speedY = 0;
+
+                if(IsKeyPressed(KEY_SPACE)) { speedY = -23; }
+
             } else {
                 speedY = -speedY + 10; // Bounce the ball downwards if it hits the platform's bottom
                 // -speedY to change it's direction downwards
             }
-
-            if(IsKeyPressed(KEY_SPACE)) { speedY = -23; }
         }
     }
 }
