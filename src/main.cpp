@@ -5,7 +5,7 @@
 int main() {
     const int screenWidth = 800;
     const int screenHeight = 600;
-    const Color nyanza = {233, 255, 219, 250};
+    const Color lightGreen = {222, 250, 222, 255};
     
     InitWindow(screenWidth, screenHeight, "First Raylib game");
     SetTargetFPS(60);
@@ -25,7 +25,7 @@ int main() {
         ball.Update(platform);
 
         BeginDrawing();
-        ClearBackground(nyanza);
+        ClearBackground(lightGreen);
 
         // Draw
         platform.Draw();
