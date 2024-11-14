@@ -3,7 +3,7 @@
 
 class Ball {
 public:
-    float x, y, size, speedX, speedY;
+    float x, y, size, speed_x, speed_y;
 
     void Draw();
     void Update(const Platform& platform);

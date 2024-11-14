@@ -4,10 +4,10 @@
 class Platform {
 public:
     float x, y, width, height;
-    const float screenWidth = 800;
-    const float screenHeight = 600;
-    static const int platformCount = 3; // 1 static and 2 random platforms
-    Rectangle platforms[platformCount];
+    const float screen_width = 800;
+    const float screen_height = 600;
+    static const int platform_count = 3; // 1 static and 2 random platforms
+    Rectangle platforms[platform_count];
 
     void makePlatforms();
     void Draw();
