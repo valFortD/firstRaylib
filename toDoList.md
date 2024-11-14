@@ -1,6 +1,9 @@
 # firstRaylibGame
 
 # Adding 2Dmode
+- Added. The platform is limited for now, build a wider platform.
+
+# Generate more random platforms on each frames
 
 # Problem with the random platforms that generate too close to each other, maybe create platform spacing?
 
