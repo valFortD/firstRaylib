@@ -3,13 +3,12 @@
 
 class Ball {
 public:
-    float x, y;
-    float size;
-    float speedX;
-    float speedY;
-    float gravity;
+    float x, y, size, speedX, speedY;
 
     void Draw();
     void Update(const Platform& platform);
     void CheckForCollision(const Platform& platform); // Reference
+
+private:
+    const float gravity = 0.5f;
 };
