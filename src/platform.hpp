@@ -9,6 +9,6 @@ public:
     static const int platform_count = 3; // 1 static and 2 random platforms
     Rectangle platforms[platform_count];
 
-    void makePlatforms();
+    void Platforms();
     void Draw();
 };

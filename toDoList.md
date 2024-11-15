@@ -14,3 +14,5 @@
 - Change the collision method to "CheckCollisionRecs" and it handle the side collision better and the ball fall more smoothly. However the distance before it falls is still a bit wider, less smooth. 
 
 # There is a delay when pressed spacebar, the ball jump is not smooth like before
+
+- 15/20 made changes to naming some variables, learnt the basic of naming in cpp tutorial

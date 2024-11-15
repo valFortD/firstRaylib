@@ -29,18 +29,16 @@ void Ball::CheckForCollision(const Platform &platform)
             .width = size * 2,
             .height = size * 2
         };
-
-        // Check collision
+        
         if(CheckCollisionRecs(ballRect, platformRect)) {
             if(y + size > platformRect.y && y < platformRect.y + platformRect.height) {
-                y = platformRect.y - size; // Place ball on top of platform
+                y = platformRect.y - size;  // Place ball on top of platform
                 speed_y = 0;                // Stop ball once on platform
 
             if(IsKeyPressed(KEY_SPACE)) { speed_y = -17; }
 
-            } else {
-                speed_y = -speed_y + 5; // Reverse ball direction if it hits the platform's bottom
-                // -speedY to change it's direction downwards
+            } else {                       // -speedY to change it's direction downwards
+                speed_y = -speed_y + 5;    // Reverse ball direction if it hits the platform's bottom
             }
         }
     }
