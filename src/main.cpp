@@ -17,10 +17,10 @@ int main() {
     Ball ball;
     ball.x = screen_width/2;
     ball.y = screen_height/2;
-    ball.size = 28;
+    ball.size = 30;
 
     Camera2D camera = {0};
-    camera.target = (Vector2){ball.x, ball.y};                    // Follows the ball
+    camera.target = (Vector2){(float)ball.x, (float)ball.y};
     camera.offset = (Vector2) {screen_width/2, screen_height/2};  // The camera centered on the screen
     camera.zoom = 1.0f;
 

@@ -12,6 +12,7 @@ void Ball::Update(const Platform& platform)
     if(IsKeyDown(KEY_LEFT) || IsKeyDown(KEY_A)) { x -= 4; }
     if(IsKeyDown(KEY_RIGHT) || IsKeyDown(KEY_D)) { x += 4; }
 
+    // Ball movement
     y += speed_y;
     speed_y += gravity;
 
@@ -35,10 +36,10 @@ void Ball::CheckForCollision(const Platform &platform)
                 y = platformRect.y - size;  // Place ball on top of platform
                 speed_y = 0;                // Stop ball once on platform
 
-            if(IsKeyPressed(KEY_SPACE)) { speed_y = -17; }
+            if(IsKeyPressed(KEY_SPACE)) { speed_y = -13; }
 
-            } else {                       // -speedY to change it's direction downwards
-                speed_y = -speed_y + 5;    // Reverse ball direction if it hits the platform's bottom
+            } else {                       // -speedY to change ball direction downwards
+                speed_y = -speed_y;    // Reverse y velocity if ball hits the platform's bottom
             }
         }
     }
