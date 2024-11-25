@@ -25,7 +25,7 @@ void Ball::CheckForCollision(const Platform &platform)
     for(int i = 0; i < Platform::platform_count; i++) {
         Rectangle platformRect = platform.platforms[i];
         Rectangle ballRect = {
-            .x = x- size,
+            .x = x - size,
             .y = y - size,
             .width = size * 2,
             .height = size * 2
